@@ -23,12 +23,6 @@ CREATE TABLE headers(
   minerReward BIGINT NOT NULL
 );
 
-CREATE TABLE headerToNode(
--- idx SERIAL,
-  id VARCHAR(64) REFERENCES headers (id),
-  nodeIp VARCHAR(128) REFERENCES nodes (ip)
-);
-
 CREATE INDEX height_index ON headers (height);
 
 CREATE TABLE transactions(

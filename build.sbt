@@ -12,10 +12,14 @@ resolvers ++= Seq("Sonatype Releases" at "https://oss.sonatype.org/content/repos
   "Typesafe maven releases" at "https://repo.typesafe.com/typesafe/maven-releases/",
   "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/")
 
-lazy val doobieVersion = "0.8.4"
-lazy val http4sVersion = "0.20.12"
+val doobieVersion = "0.8.4"
+val http4sVersion = "0.20.12"
 
 libraryDependencies ++= Seq(
+  "org.http4s" %% "http4s-circe" % "0.18.23",
+  "com.typesafe" % "config" % "1.4.0",
+  "com.iheart" %% "ficus" % "1.4.2",
+  "co.fs2" %% "fs2-core" % "2.0.0",
   "io.estatico" %% "newtype" % "0.4.3",
   "eu.timepit" %% "refined"  % "0.9.10",
   "org.typelevel" %% "cats-effect" % "2.0.0",
